@@ -10,11 +10,16 @@
 		EB7330C81ADFFB30005C5730 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7330C71ADFFB30005C5730 /* main.m */; };
 		EB7330CB1ADFFB30005C5730 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7330CA1ADFFB30005C5730 /* AppDelegate.m */; };
 		EB7330CE1ADFFB30005C5730 /* MapOverlayExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB7330CC1ADFFB30005C5730 /* MapOverlayExample.xcdatamodeld */; };
-		EB7330D11ADFFB30005C5730 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7330D01ADFFB30005C5730 /* ViewController.m */; };
+		EB7330D11ADFFB30005C5730 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7330D01ADFFB30005C5730 /* MapViewController.m */; };
 		EB7330D41ADFFB30005C5730 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB7330D21ADFFB30005C5730 /* Main.storyboard */; };
 		EB7330D61ADFFB30005C5730 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB7330D51ADFFB30005C5730 /* Images.xcassets */; };
 		EB7330D91ADFFB30005C5730 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB7330D71ADFFB30005C5730 /* LaunchScreen.xib */; };
 		EB7330E51ADFFB30005C5730 /* MapOverlayExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7330E41ADFFB30005C5730 /* MapOverlayExampleTests.m */; };
+		EB7330F01ADFFF91005C5730 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7330EF1ADFFF91005C5730 /* MapKit.framework */; };
+		EB7330F31AE03900005C5730 /* MapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7330F21AE03900005C5730 /* MapOverlay.m */; };
+		EB7330F81AE03B7E005C5730 /* GeoJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7330F71AE03B7E005C5730 /* GeoJSONSerialization.m */; };
+		EB7330FA1AE03BD6005C5730 /* countries-ISOalpha2.json in Resources */ = {isa = PBXBuildFile; fileRef = EB7330F91AE03BD6005C5730 /* countries-ISOalpha2.json */; };
+		EB7330FF1AE05286005C5730 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7330FE1AE05286005C5730 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +39,23 @@
 		EB7330C91ADFFB30005C5730 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EB7330CA1ADFFB30005C5730 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EB7330CD1ADFFB30005C5730 /* MapOverlayExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MapOverlayExample.xcdatamodel; sourceTree = "<group>"; };
-		EB7330CF1ADFFB30005C5730 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EB7330D01ADFFB30005C5730 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EB7330CF1ADFFB30005C5730 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		EB7330D01ADFFB30005C5730 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		EB7330D31ADFFB30005C5730 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB7330D51ADFFB30005C5730 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EB7330D81ADFFB30005C5730 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EB7330DE1ADFFB30005C5730 /* MapOverlayExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapOverlayExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7330E31ADFFB30005C5730 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB7330E41ADFFB30005C5730 /* MapOverlayExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapOverlayExampleTests.m; sourceTree = "<group>"; };
+		EB7330EF1ADFFF91005C5730 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EB7330F11AE03900005C5730 /* MapOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapOverlay.h; path = "Map Overlay/MapOverlay.h"; sourceTree = "<group>"; };
+		EB7330F21AE03900005C5730 /* MapOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapOverlay.m; path = "Map Overlay/MapOverlay.m"; sourceTree = "<group>"; };
+		EB7330F61AE03B7E005C5730 /* GeoJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoJSONSerialization.h; sourceTree = "<group>"; };
+		EB7330F71AE03B7E005C5730 /* GeoJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoJSONSerialization.m; sourceTree = "<group>"; };
+		EB7330F91AE03BD6005C5730 /* countries-ISOalpha2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "countries-ISOalpha2.json"; sourceTree = "<group>"; };
+		EB7330FC1AE05286005C5730 /* MBProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		EB7330FD1AE05286005C5730 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		EB7330FE1AE05286005C5730 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7330F01ADFFF91005C5730 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,8 @@
 		EB7330B91ADFFB2F005C5730 = {
 			isa = PBXGroup;
 			children = (
+				EB7330F41AE03B22005C5730 /* Helpers */,
+				EB7330EF1ADFFF91005C5730 /* MapKit.framework */,
 				EB7330C41ADFFB30005C5730 /* MapOverlayExample */,
 				EB7330E11ADFFB30005C5730 /* MapOverlayExampleTests */,
 				EB7330C31ADFFB30005C5730 /* Products */,
@@ -85,12 +102,13 @@
 			children = (
 				EB7330C91ADFFB30005C5730 /* AppDelegate.h */,
 				EB7330CA1ADFFB30005C5730 /* AppDelegate.m */,
-				EB7330CF1ADFFB30005C5730 /* ViewController.h */,
-				EB7330D01ADFFB30005C5730 /* ViewController.m */,
-				EB7330D21ADFFB30005C5730 /* Main.storyboard */,
 				EB7330D51ADFFB30005C5730 /* Images.xcassets */,
 				EB7330D71ADFFB30005C5730 /* LaunchScreen.xib */,
+				EB7330D21ADFFB30005C5730 /* Main.storyboard */,
+				EB7330EE1ADFFBB1005C5730 /* Map Overlay */,
 				EB7330CC1ADFFB30005C5730 /* MapOverlayExample.xcdatamodeld */,
+				EB7330CF1ADFFB30005C5730 /* MapViewController.h */,
+				EB7330D01ADFFB30005C5730 /* MapViewController.m */,
 				EB7330C51ADFFB30005C5730 /* Supporting Files */,
 			);
 			path = MapOverlayExample;
@@ -120,6 +138,44 @@
 				EB7330E31ADFFB30005C5730 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB7330EE1ADFFBB1005C5730 /* Map Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				EB7330F91AE03BD6005C5730 /* countries-ISOalpha2.json */,
+				EB7330F11AE03900005C5730 /* MapOverlay.h */,
+				EB7330F21AE03900005C5730 /* MapOverlay.m */,
+			);
+			name = "Map Overlay";
+			sourceTree = "<group>";
+		};
+		EB7330F41AE03B22005C5730 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EB7330FB1AE051DF005C5730 /* MBProgressHUD */,
+				EB7330F51AE03B33005C5730 /* GeoJSONSerialization */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		EB7330F51AE03B33005C5730 /* GeoJSONSerialization */ = {
+			isa = PBXGroup;
+			children = (
+				EB7330F61AE03B7E005C5730 /* GeoJSONSerialization.h */,
+				EB7330F71AE03B7E005C5730 /* GeoJSONSerialization.m */,
+			);
+			name = GeoJSONSerialization;
+			sourceTree = "<group>";
+		};
+		EB7330FB1AE051DF005C5730 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				EB7330FC1AE05286005C5730 /* MBProgressHUD-Prefix.pch */,
+				EB7330FD1AE05286005C5730 /* MBProgressHUD.h */,
+				EB7330FE1AE05286005C5730 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +227,11 @@
 				TargetAttributes = {
 					EB7330C11ADFFB30005C5730 = {
 						CreatedOnToolsVersion = 6.3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					EB7330DD1ADFFB30005C5730 = {
 						CreatedOnToolsVersion = 6.3;
@@ -202,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7330FA1AE03BD6005C5730 /* countries-ISOalpha2.json in Resources */,
 				EB7330D41ADFFB30005C5730 /* Main.storyboard in Resources */,
 				EB7330D91ADFFB30005C5730 /* LaunchScreen.xib in Resources */,
 				EB7330D61ADFFB30005C5730 /* Images.xcassets in Resources */,
@@ -222,10 +284,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7330F81AE03B7E005C5730 /* GeoJSONSerialization.m in Sources */,
 				EB7330CB1ADFFB30005C5730 /* AppDelegate.m in Sources */,
 				EB7330CE1ADFFB30005C5730 /* MapOverlayExample.xcdatamodeld in Sources */,
-				EB7330D11ADFFB30005C5730 /* ViewController.m in Sources */,
+				EB7330F31AE03900005C5730 /* MapOverlay.m in Sources */,
+				EB7330D11ADFFB30005C5730 /* MapViewController.m in Sources */,
 				EB7330C81ADFFB30005C5730 /* main.m in Sources */,
+				EB7330FF1AE05286005C5730 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -341,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -353,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MapOverlayExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MapOverlayExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,6 +489,7 @@
 				EB7330EA1ADFFB30005C5730 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB7330EB1ADFFB30005C5730 /* Build configuration list for PBXNativeTarget "MapOverlayExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +498,7 @@
 				EB7330ED1ADFFB30005C5730 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
