@@ -36,11 +36,20 @@
     self.edgeInsets = UIEdgeInsetsMake(0, 10, 0, 10);
     [self sizeToFit];
     
-    [self setFrame:CGRectMake(
-                                    view.frame.size.width/2-self.frame.size.width/2,
-                                    view.frame.size.height*3/4,
-                                    self.frame.size.width,
-                                    self.frame.size.height+20)];
+    self.textAlignment = NSTextAlignmentCenter;
+    
+    [self setFrame:CGRectMake(view.frame.size.width/2-self.frame.size.width/2,
+                              view.frame.size.height*3/4-self.frame.size.height+20,
+                              self.frame.size.width,
+                              self.frame.size.height+20)];
+    
+    if (self.frame.size.width > view.frame.size.width*0.8) {
+        self.numberOfLines = 0;
+        [self setFrame:CGRectMake(view.frame.size.width/2-view.frame.size.width*0.8/2,
+                                  view.frame.size.height*3/4-self.frame.size.height/2,
+                                  view.frame.size.width*0.8,
+                                  self.frame.size.height+10)];
+    }
     
     self.layer.cornerRadius = 5.0;
     self.layer.masksToBounds = YES;
