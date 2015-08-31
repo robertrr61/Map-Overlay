@@ -29,6 +29,7 @@
             if ([[(NSDictionary*)countries[i] objectForKey:@"id"] isEqualToString:countryCode]) {
                 shape = [GeoJSONSerialization shapeFromGeoJSONFeature:countries[i] error:&error];
                 found = YES;
+                break;
             }
         }
         

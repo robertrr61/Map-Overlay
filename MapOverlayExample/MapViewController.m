@@ -9,11 +9,12 @@
 #import "MapViewController.h"
 #import <MapKit/MapKit.h>
 #import "MapOverlay.h"
-#import "MBProgressHUD.h"
+#import "ToastLabel.h"
 
 @interface MapViewController () <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -43,20 +44,16 @@
     [self.mapView setRegion:adjustedRegion animated:YES];
     
     // show instructions toast
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode = MBProgressHUDModeText;
-    hud.labelText = @"Long press on a country to add overlay over it";
-    hud.labelFont = [UIFont boldSystemFontOfSize:10];
-    hud.yOffset = self.view.bounds.size.height/3;
-    hud.margin = 10.f;
-    [hud hide:YES afterDelay:2.0];
+    [[[ToastLabel alloc] init] showWithMessage:@"Long press on a country to add overlay over it" andDelay:3.0 onView:self.view];
+    
 }
 
 #pragma mark - Handle Gesture
 - (void)handleLongPress:(UIGestureRecognizer*)recognizer {
     if (recognizer.state == UIGestureRecognizerStateBegan) {
         NSLog(@"Long pressed");
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        [self.activityIndicator startAnimating];
         
         // remove previous annotations and overlays
         [self.mapView removeAnnotations:self.mapView.annotations];
@@ -67,12 +64,6 @@
         CLLocationCoordinate2D touchMapCoordinate = [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
         
         // move to touch point
-//        CLLocationCoordinate2D startCoord = touchMapCoordinate;
-//        MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, .5, .5)];
-//        adjustedRegion.span.latitudeDelta = 30;
-//        adjustedRegion.span.longitudeDelta = 30;
-//        [self.mapView setRegion:adjustedRegion animated:YES];
-        
         NSLog(@"Coordinate: %.02f, %.02f",touchMapCoordinate.latitude, touchMapCoordinate.longitude);
         
         // add overlay
@@ -103,24 +94,19 @@
             // add overlay
             [MapOverlay addCountryOverlayToMap:self.mapView
                                WithCountryCode:countryCode];
-            
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            [self.activityIndicator stopAnimating];
             
             // show country name
             if (placemark.country && ![placemark.country isEqualToString:@""]) {
-                MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-                hud.mode = MBProgressHUDModeText;
-                hud.labelText = placemark.country;
-                hud.labelFont = [UIFont boldSystemFontOfSize:14];
-                hud.margin = 10.f;
-                hud.yOffset = self.view.bounds.size.height/3;
-                
-                [hud hide:YES afterDelay:1.0];
+                [[[ToastLabel alloc] init] showWithMessage:placemark.country andDelay:1.5 onView:self.view];
+            } else {
+                [[[ToastLabel alloc] init] showWithMessage:@"Not found" andDelay:1.5 onView:self.view];
             }
             
         } else {
             NSLog(@"Not found");
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            [self.activityIndicator stopAnimating];
+            [[[ToastLabel alloc] init] showWithMessage:@"Not found" andDelay:1.5 onView:self.view];
         }
     }];
 }

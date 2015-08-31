@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB47E0D41B94DDBE00E1D59B /* ToastLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB47E0D31B94DDBE00E1D59B /* ToastLabel.m */; };
 		EB7330C81ADFFB30005C5730 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7330C71ADFFB30005C5730 /* main.m */; };
 		EB7330CB1ADFFB30005C5730 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7330CA1ADFFB30005C5730 /* AppDelegate.m */; };
 		EB7330CE1ADFFB30005C5730 /* MapOverlayExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB7330CC1ADFFB30005C5730 /* MapOverlayExample.xcdatamodeld */; };
@@ -19,7 +20,6 @@
 		EB7330F31AE03900005C5730 /* MapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7330F21AE03900005C5730 /* MapOverlay.m */; };
 		EB7330F81AE03B7E005C5730 /* GeoJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7330F71AE03B7E005C5730 /* GeoJSONSerialization.m */; };
 		EB7330FA1AE03BD6005C5730 /* countries-ISOalpha2.json in Resources */ = {isa = PBXBuildFile; fileRef = EB7330F91AE03BD6005C5730 /* countries-ISOalpha2.json */; };
-		EB7330FF1AE05286005C5730 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7330FE1AE05286005C5730 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB47E0D21B94DDBE00E1D59B /* ToastLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToastLabel.h; path = "Toast Label/ToastLabel.h"; sourceTree = "<group>"; };
+		EB47E0D31B94DDBE00E1D59B /* ToastLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToastLabel.m; path = "Toast Label/ToastLabel.m"; sourceTree = "<group>"; };
 		EB7330C21ADFFB30005C5730 /* MapOverlayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapOverlayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7330C61ADFFB30005C5730 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB7330C71ADFFB30005C5730 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,9 +55,6 @@
 		EB7330F61AE03B7E005C5730 /* GeoJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoJSONSerialization.h; sourceTree = "<group>"; };
 		EB7330F71AE03B7E005C5730 /* GeoJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoJSONSerialization.m; sourceTree = "<group>"; };
 		EB7330F91AE03BD6005C5730 /* countries-ISOalpha2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "countries-ISOalpha2.json"; sourceTree = "<group>"; };
-		EB7330FC1AE05286005C5730 /* MBProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
-		EB7330FD1AE05286005C5730 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		EB7330FE1AE05286005C5730 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB47E0D11B94DD8000E1D59B /* Toast Label */ = {
+			isa = PBXGroup;
+			children = (
+				EB47E0D21B94DDBE00E1D59B /* ToastLabel.h */,
+				EB47E0D31B94DDBE00E1D59B /* ToastLabel.m */,
+			);
+			name = "Toast Label";
+			sourceTree = "<group>";
+		};
 		EB7330B91ADFFB2F005C5730 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +108,7 @@
 		EB7330C41ADFFB30005C5730 /* MapOverlayExample */ = {
 			isa = PBXGroup;
 			children = (
+				EB47E0D11B94DD8000E1D59B /* Toast Label */,
 				EB7330C91ADFFB30005C5730 /* AppDelegate.h */,
 				EB7330CA1ADFFB30005C5730 /* AppDelegate.m */,
 				EB7330D51ADFFB30005C5730 /* Images.xcassets */,
@@ -153,7 +162,6 @@
 		EB7330F41AE03B22005C5730 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				EB7330FB1AE051DF005C5730 /* MBProgressHUD */,
 				EB7330F51AE03B33005C5730 /* GeoJSONSerialization */,
 			);
 			name = Helpers;
@@ -166,16 +174,6 @@
 				EB7330F71AE03B7E005C5730 /* GeoJSONSerialization.m */,
 			);
 			name = GeoJSONSerialization;
-			sourceTree = "<group>";
-		};
-		EB7330FB1AE051DF005C5730 /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				EB7330FC1AE05286005C5730 /* MBProgressHUD-Prefix.pch */,
-				EB7330FD1AE05286005C5730 /* MBProgressHUD.h */,
-				EB7330FE1AE05286005C5730 /* MBProgressHUD.m */,
-			);
-			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,11 +284,11 @@
 			files = (
 				EB7330F81AE03B7E005C5730 /* GeoJSONSerialization.m in Sources */,
 				EB7330CB1ADFFB30005C5730 /* AppDelegate.m in Sources */,
+				EB47E0D41B94DDBE00E1D59B /* ToastLabel.m in Sources */,
 				EB7330CE1ADFFB30005C5730 /* MapOverlayExample.xcdatamodeld in Sources */,
 				EB7330F31AE03900005C5730 /* MapOverlay.m in Sources */,
 				EB7330D11ADFFB30005C5730 /* MapViewController.m in Sources */,
 				EB7330C81ADFFB30005C5730 /* main.m in Sources */,
-				EB7330FF1AE05286005C5730 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
