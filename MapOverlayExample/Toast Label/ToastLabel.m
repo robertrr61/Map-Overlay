@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 mobmedianet. All rights reserved.
 //
 
+#define VERTICAL_POSITION 2/3 // Vertical Position of Toast
+
 #import "ToastLabel.h"
 
 @implementation ToastLabel
@@ -30,38 +32,48 @@
 }
 
 #pragma mark - Show Toast
-- (void)showWithMessage:(NSString *)message andDelay:(float)delay onView:(UIView *)view{
-    [self setAttributedText:[[NSAttributedString alloc] initWithString:message attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}]];
-    [self setBackgroundColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.5]];
-    self.edgeInsets = UIEdgeInsetsMake(0, 10, 0, 10);
-    [self sizeToFit];
++(void)showToastWithMessage:(NSString*)message andDelay:(float)delay onView:(UIView*)view {
+    // init
+    ToastLabel *toastLabel = [[ToastLabel alloc] init];
     
-    self.textAlignment = NSTextAlignmentCenter;
+    // setting text and background
+    [toastLabel setAttributedText:[[NSAttributedString alloc] initWithString:message attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}]];
+    toastLabel.textAlignment = NSTextAlignmentCenter;
+    [toastLabel setBackgroundColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.7]];
     
-    [self setFrame:CGRectMake(view.frame.size.width/2-self.frame.size.width/2,
-                              view.frame.size.height*3/4-self.frame.size.height+20,
-                              self.frame.size.width,
-                              self.frame.size.height+20)];
+    // size and insets
+    toastLabel.edgeInsets = UIEdgeInsetsMake(0, 10, 0, 10);
+    [toastLabel sizeToFit];
+    [toastLabel setFrame:CGRectMake(view.frame.size.width/2-toastLabel.frame.size.width/2,
+                              view.frame.size.height*VERTICAL_POSITION-toastLabel.frame.size.height+20,
+                              toastLabel.frame.size.width,
+                              toastLabel.frame.size.height+20)];
     
-    if (self.frame.size.width > view.frame.size.width*0.8) {
-        self.numberOfLines = 0;
-        [self setFrame:CGRectMake(view.frame.size.width/2-view.frame.size.width*0.8/2,
-                                  view.frame.size.height*3/4-self.frame.size.height/2,
+    // size adjustment
+    if (toastLabel.frame.size.width > view.frame.size.width*0.8) {
+        toastLabel.numberOfLines = 0;
+        [toastLabel setFrame:CGRectMake(view.frame.size.width/2-view.frame.size.width*0.8/2,
+                                  view.frame.size.height*VERTICAL_POSITION-toastLabel.frame.size.height/2,
                                   view.frame.size.width*0.8,
-                                  self.frame.size.height+10)];
+                                  toastLabel.frame.size.height+10)];
     }
     
-    self.layer.cornerRadius = 5.0;
-    self.layer.masksToBounds = YES;
-    [view addSubview:self];
-    [self setAlpha:0];
+    // rounded corners
+    toastLabel.layer.cornerRadius = 5.0;
+    toastLabel.layer.masksToBounds = YES;
+    
+    // add to view with fade in animation
+    [view addSubview:toastLabel];
+    [toastLabel setAlpha:0];
     [UIView animateWithDuration:0.3 animations:^{
-        [self setAlpha:1.0];
+        [toastLabel setAlpha:1.0];
     }];
-    [self performSelector:@selector(hideToastMessage:) withObject:self afterDelay:delay];
+    
+    // hide after delay
+    [self performSelector:@selector(hideToastMessage:) withObject:toastLabel afterDelay:delay];
 }
 
--(void)hideToastMessage:(ToastLabel*)messageLabel {
++(void)hideToastMessage:(ToastLabel*)messageLabel {
     [UIView animateWithDuration:0.3 animations:^{
         [messageLabel setAlpha:0];
     } completion:^(BOOL finished) {

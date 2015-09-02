@@ -44,7 +44,7 @@
     [self.mapView setRegion:adjustedRegion animated:YES];
     
     // show instructions toast
-    [[[ToastLabel alloc] init] showWithMessage:@"Long press on a country to add overlay over it" andDelay:3.0 onView:self.view];
+    [ToastLabel showToastWithMessage:@"Long press on a country to add overlay over it" andDelay:3.0 onView:self.view];
     
 }
 
@@ -98,15 +98,16 @@
             
             // show country name
             if (placemark.country && ![placemark.country isEqualToString:@""]) {
-                [[[ToastLabel alloc] init] showWithMessage:placemark.country andDelay:1.5 onView:self.view];
+                [ToastLabel showToastWithMessage:placemark.country andDelay:1.5 onView:self.view];
             } else {
-                [[[ToastLabel alloc] init] showWithMessage:@"Not found" andDelay:1.5 onView:self.view];
+                [ToastLabel showToastWithMessage:@"Not found" andDelay:1.5 onView:self.view];
             }
             
         } else {
             NSLog(@"Not found");
             [self.activityIndicator stopAnimating];
-            [[[ToastLabel alloc] init] showWithMessage:@"Not found" andDelay:1.5 onView:self.view];
+//            [[[ToastLabel alloc] init] showWithMessage:@"Not found" andDelay:1.5 onView:self.view];
+            [ToastLabel showToastWithMessage:@"Not found" andDelay:1.5 onView:self.view];
         }
     }];
 }

@@ -16,6 +16,6 @@
 
 - (void)drawTextInRect:(CGRect)rect;
 
-- (void)showWithMessage:(NSString*)message andDelay:(float)delay onView:(UIView*)view;
++(void)showToastWithMessage:(NSString*)message andDelay:(float)delay onView:(UIView*)view;
 
 @end
