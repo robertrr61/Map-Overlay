@@ -39,7 +39,7 @@
     // setting text and background
     [toastLabel setAttributedText:[[NSAttributedString alloc] initWithString:message attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}]];
     toastLabel.textAlignment = NSTextAlignmentCenter;
-    [toastLabel setBackgroundColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.7]];
+    [toastLabel setBackgroundColor:[UIColor darkGrayColor]];
     
     // size and insets
     toastLabel.edgeInsets = UIEdgeInsetsMake(0, 10, 0, 10);
